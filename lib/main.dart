@@ -72,8 +72,7 @@ class MyHomePage extends StatelessWidget {
                         Text(
                           tr.title,
                           style: const TextStyle(
-                              fontWeight: FontWeight.bold, 
-                              fontSize: 16),
+                              fontWeight: FontWeight.bold, fontSize: 16),
                         ),
                         Text(
                           tr.date.toString(),
