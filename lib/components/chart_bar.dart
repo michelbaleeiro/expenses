@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class CharBar extends StatelessWidget {
+class ChartBar extends StatelessWidget {
   final String? label;
   final double? value;
   final double? percentage;
 
-  const CharBar({
+  const ChartBar({
     Key? key,
     this.label,
     this.value,
