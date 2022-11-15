@@ -25,11 +25,6 @@ class Chart extends StatelessWidget {
         }
       }
 
-      // ignore: avoid_print
-      print(DateFormat.E().format(weekDay)[0]);
-      // ignore: avoid_print
-      print(totalSum);
-
       return {
         'day': DateFormat.E().format(weekDay)[0],
         'value': totalSum,
@@ -44,7 +39,9 @@ class Chart extends StatelessWidget {
       elevation: 6,
       margin: const EdgeInsets.all(20),
       child: Row(
-        children: [],
+        children: groupedTransactions.map((tr){
+          return Text('${tr['day']}: ${tr['value']}');
+        }).toList(),
       ),
     );
   }
