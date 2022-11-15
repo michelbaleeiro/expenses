@@ -42,9 +42,9 @@ class Chart extends StatelessWidget {
       child: Row(
         children: groupedTransactions.map((tr) {
           return ChartBar(
-            label: tr['day'],
-            value: tr['value'],
-            percentage: 0,
+            label: tr['day'] as String,
+            value: tr['value'] as double,
+            percentage: 0.3,
           );
         }).toList(),
       ),
