@@ -63,10 +63,6 @@ class _TransactionFormState extends State<TransactionForm> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    // style: ElevatedButton.styleFrom(
-                    //   primary: Theme.of(context).primaryColor,
-                    //   onPrimary: Colors.white,
-                    // ),
                     onPressed: () {},
                   ),
                   
