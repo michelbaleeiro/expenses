@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 // ignore: use_key_in_widget_constructors
 class TransactionForm extends StatefulWidget {
   final void Function(String, double) onSubmit;
@@ -16,8 +17,8 @@ class _TransactionFormState extends State<TransactionForm> {
   _submitForm() {
     final title = titleController.text;
     final value = double.tryParse(valueController.text) ?? 0.0;
-    
-    if(title.isEmpty || value <= 0){
+
+    if (title.isEmpty || value <= 0) {
       return;
     }
 
@@ -44,20 +45,44 @@ class _TransactionFormState extends State<TransactionForm> {
               controller: valueController,
               keyboardType:
                   const TextInputType.numberWithOptions(decimal: true),
-                  onSubmitted: (_) => _submitForm(),
+              onSubmitted: (_) => _submitForm(),
               decoration: const InputDecoration(
                 labelText: 'Valor (R\$)',
+              ),
+            ),
+            // ignore: sized_box_for_whitespace
+            Container(
+              height: 70,
+              child: Row(
+                children: [
+                  const Text('Nenhuma data selecionada!'),
+                  TextButton(
+                    child: const Text(
+                      'Selecionar Data',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    // style: ElevatedButton.styleFrom(
+                    //   primary: Theme.of(context).primaryColor,
+                    //   onPrimary: Colors.white,
+                    // ),
+                    onPressed: () {},
+                  ),
+                  
+                ],
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 ElevatedButton(
-                  onPressed: _submitForm,
-                  child: const Text(
-                    'Nova Transação',
-                    style: TextStyle(color: Colors.purple),
+                  child: const Text('Nova transação'),
+                  style: ElevatedButton.styleFrom(
+                    // primary: Theme.of(context).primaryColor,
+                    onPrimary: Theme.of(context).textTheme.button?.color,
                   ),
+                  onPressed: _submitForm,
                 ),
               ],
             ),
