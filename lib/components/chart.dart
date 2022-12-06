@@ -41,6 +41,7 @@ class Chart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: sized_box_for_whitespace
     return Card(
       elevation: 6,
       margin: const EdgeInsets.all(20),
