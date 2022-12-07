@@ -121,12 +121,12 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             // ignore: sized_box_for_whitespace
             Container(
-              height: availableHeight * 0.3,
+              height: availableHeight * 0.25,
               child: Chart(_recentTransactions!),
             ),
             // ignore: sized_box_for_whitespace
             Container(
-                height: availableHeight * 0.7,
+                height: availableHeight * 0.75,
                 child: TransactionList(_transactions, _removeTransaction)),
           ],
         ),
